@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, FormEvent } from 'react';
 import Link from 'next/link';
 import { Button } from '@material-ui/core';
 import { ReactNode } from 'react';
@@ -6,7 +6,7 @@ import { ReactNode } from 'react';
 export interface ButtonProps {
   children: ReactNode;
   link?: string;
-  onClick?: () => {};
+  onClick?: (event: FormEvent<EventTarget>) => void;
 }
 
 const ButtonIcon: FC<ButtonProps> = (props: ButtonProps): JSX.Element => {
@@ -17,7 +17,7 @@ const ButtonIcon: FC<ButtonProps> = (props: ButtonProps): JSX.Element => {
           variant="contained"
           size="medium"
           color="primary"
-          style={{ fontSize: 16, fontWeight: 'bold' }}
+          style={{ fontSize: 16 }}
         >
           {props.children}
         </Button>
