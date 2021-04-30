@@ -60,17 +60,17 @@ const EventItem: React.FC<EventItemProps> = (
           <CardMedia className={classes.media} image={image} title={title} />
           <Typography
             gutterBottom
-            variant='h5'
-            component='h2'
+            variant="h5"
+            component="h2"
             style={{ fontWeight: 'bold' }}
           >
             {title}
           </Typography>
           <Typography
             gutterBottom
-            variant='subtitle1'
-            component='div'
-            color='textSecondary'
+            variant="subtitle1"
+            component="div"
+            color="textSecondary"
           >
             <EventIcon
               style={{
@@ -81,33 +81,31 @@ const EventItem: React.FC<EventItemProps> = (
             />
             {humanReadableDate}
           </Typography>
-          <div style={{ display: 'flex', border: '1px solid green' }}>
+          <div style={{ display: 'flex' }}>
             <LocationIcon
               style={{
                 marginTop: -2,
                 marginRight: 5,
                 width: 20,
-                border: '1px dotted blue',
               }}
-              color='action'
+              color="action"
             />
             <Typography
               gutterBottom
-              variant='subtitle1'
-              component='span'
-              color='textSecondary'
+              variant="subtitle1"
+              component="span"
+              color="textSecondary"
               style={{
                 verticalAlign: 'top',
                 whiteSpace: 'pre-line',
                 lineHeight: 1.2,
-                border: '1px dotted red',
               }}
             >
               {formattedAddress}
             </Typography>
           </div>
         </CardActionArea>
-        <CardActions className='event-item-button'>
+        <CardActions className="event-item-button">
           <ButtonIcon link={exploreLink}>Explore</ButtonIcon>
         </CardActions>
       </CardContent>

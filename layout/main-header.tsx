@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
+      marginBottom: 80,
     },
     menuButton: {
       marginRight: theme.spacing(2),
@@ -30,20 +31,20 @@ const MainHeader: React.FC = (): JSX.Element => {
   return (
     <header>
       <div className={classes.root}>
-        <AppBar position='fixed'>
+        <AppBar position="fixed">
           <Toolbar>
             <IconButton
-              edge='start'
+              edge="start"
               className={classes.menuButton}
-              color='inherit'
-              aria-label='menu'
+              color="inherit"
+              aria-label="menu"
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant='h6' className={classes.title}>
+            <Typography variant="h6" className={classes.title}>
               News
             </Typography>
-            <Button color='inherit'>Login</Button>
+            <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
       </div>

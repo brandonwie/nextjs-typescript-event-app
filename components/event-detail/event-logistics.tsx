@@ -1,4 +1,10 @@
+import classes from './event-logistics.module.css';
 import LogisticsItem from './logistics-item';
+import { FC } from 'react';
+import {
+  Event as EventIcon,
+  LocationOnOutlined as LocationIcon,
+} from '@material-ui/icons';
 
 interface EventLogisticsProps {
   date: string;
@@ -7,11 +13,12 @@ interface EventLogisticsProps {
   imageAlt: string;
 }
 
-const EventLogistics: React.FC<EventLogisticsProps> = (
-  props: EventLogisticsProps
-): JSX.Element => {
-  const { date, address, image, imageAlt } = props;
-
+const EventLogistics: FC<EventLogisticsProps> = ({
+  date,
+  address,
+  image,
+  imageAlt,
+}: EventLogisticsProps): JSX.Element => {
   const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'long',
@@ -20,15 +27,15 @@ const EventLogistics: React.FC<EventLogisticsProps> = (
   const addressText = address.replace(', ', '\n');
 
   return (
-    <section>
-      <div>
-        <img src={`/${image}`} alt={imageAlt} />
+    <section className={classes.logistics}>
+      <div className={classes.image}>
+        <img src={`${image}`} alt={imageAlt} />
       </div>
-      <ul>
-        <LogisticsItem>
+      <ul className={classes.list}>
+        <LogisticsItem icon={<EventIcon />}>
           <time>{humanReadableDate}</time>
         </LogisticsItem>
-        <LogisticsItem>
+        <LogisticsItem icon={<LocationIcon />}>
           <address>{addressText}</address>
         </LogisticsItem>
       </ul>

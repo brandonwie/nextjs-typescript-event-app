@@ -74,6 +74,12 @@ module.exports = {
         ],
       },
     ],
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['@material-ui/*/*/*', '!@material-ui/core/test-utils/*'],
+      },
+    ],
   },
   settings: {
     react: {
