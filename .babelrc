@@ -2,15 +2,24 @@
   "presets": ["next/babel"],
   "plugins": [
     [
-      "styled-components",
+      "babel-plugin-import",
       {
-        "ssr": true,
-        "minify": true,
-        "transpileTemplateLiterals": true,
-        "pure": true,
-        "displayName": true,
-        "preprocess": false
-      }
+        "libraryName": "@material-ui/core",
+        // Use ""libraryDirectory": ""," if your bundler does not support ES modules
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      },
+      "core"
+    ],
+    [
+      "babel-plugin-import",
+      {
+        "libraryName": "@material-ui/icons",
+        // Use ""libraryDirectory": ""," if your bundler does not support ES modules
+        "libraryDirectory": "",
+        "camel2DashComponentName": false
+      },
+      "icons"
     ]
   ]
 }
