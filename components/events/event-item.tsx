@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Card,
@@ -37,9 +37,7 @@ const useStyles = makeStyles({
   },
 });
 
-const EventItem: React.FC<EventItemProps> = (
-  props: EventItemProps
-): JSX.Element => {
+const EventItem: FC<EventItemProps> = (props: EventItemProps): JSX.Element => {
   const classes = useStyles();
   const { id, title, description, location, date, image, isFeatured } = props;
 

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import {
   AppBar,
   IconButton,
@@ -5,10 +6,10 @@ import {
   Toolbar,
   Typography,
   Button,
+  Link,
 } from '@material-ui/core';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { Menu as MenuIcon } from '@material-ui/icons';
-import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,18 +21,18 @@ const useStyles = makeStyles((theme: Theme) =>
       marginRight: theme.spacing(2),
     },
     title: {
-      flexGrow: 1,
+      flexGrow: 0.1,
     },
   })
 );
 
-const MainHeader: React.FC = (): JSX.Element => {
+const MainHeader: FC = (): JSX.Element => {
   const classes = useStyles();
 
   return (
     <header>
       <div className={classes.root}>
-        <AppBar position="fixed">
+        <AppBar position="fixed" color="primary">
           <Toolbar>
             <IconButton
               edge="start"
@@ -42,7 +43,14 @@ const MainHeader: React.FC = (): JSX.Element => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              News
+              <Link href="/" color="inherit">
+                Next
+              </Link>
+            </Typography>
+            <Typography variant="h6" className={classes.title}>
+              <Link href="/" color="inherit">
+                Browse All Events
+              </Link>
             </Typography>
             <Button color="inherit">Login</Button>
           </Toolbar>
