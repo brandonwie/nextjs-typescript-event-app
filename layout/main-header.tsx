@@ -1,27 +1,16 @@
 import { FC } from 'react';
-import {
-  AppBar,
-  IconButton,
-  Theme,
-  Toolbar,
-  Typography,
-  Button,
-  Link,
-} from '@material-ui/core';
+import { AppBar, Theme, Toolbar, Typography, Link } from '@material-ui/core';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import { Menu as MenuIcon } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      flexGrow: 1,
-      marginBottom: 80,
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
+      marginBottom: 64,
     },
     title: {
-      flexGrow: 0.1,
+      marginLeft: 15,
+      marginRight: 20,
+      fontWeight: 'bold',
     },
   })
 );
@@ -34,25 +23,16 @@ const MainHeader: FC = (): JSX.Element => {
       <div className={classes.root}>
         <AppBar position="fixed" color="primary">
           <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h5" className={classes.title}>
               <Link href="/" color="inherit">
-                Next
+                Next Events
               </Link>
             </Typography>
-            <Typography variant="h6" className={classes.title}>
-              <Link href="/" color="inherit">
+            <Typography variant="h6">
+              <Link href="/events" color="inherit">
                 Browse All Events
               </Link>
             </Typography>
-            <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
       </div>
