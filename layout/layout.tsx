@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import MainHeader from './main-header';
 
-const Layout: React.FC = (props): JSX.Element => {
+const Layout: FC = (props): JSX.Element => {
   return (
     <>
       <MainHeader />

@@ -1,12 +1,11 @@
+import { FC } from 'react';
 import EventItem, { EventItemProps } from './event-item';
 
 export interface EventListProps {
   data: EventItemProps[];
 }
 
-const EventList: React.FC<EventListProps> = (
-  props: EventListProps
-): JSX.Element => {
+const EventList: FC<EventListProps> = (props: EventListProps): JSX.Element => {
   const { data } = props;
 
   return (
