@@ -1,10 +1,10 @@
 # NEXT EVENTS
 
-practice using Next and TypeScript
+Social Events App using dummy data
 
-## Note
+## File-based Routing
 
-Styles and structures of this project are inconsistent and messy.
+A practice using Next and TypeScript
 
 ## Adopting Material UI into Next
 
@@ -16,3 +16,7 @@ To use Next with Material UI, there has been continuous mismatch of className pr
 2. MUI styles will be rendered after the app and page styles are applied.
 
 Check out this [link](https://www.youtube.com/watch?v=0rnVfshKqDI) for more information.
+
+## Note
+
+Styles and structures of this project are inconsistent.
