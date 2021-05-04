@@ -10,8 +10,8 @@ const theme = createMuiTheme({
     },
     primary: {
       light: '#757ce8',
-      main: '#3f50b5',
-      dark: '#002884',
+      main: '#3f51b5',
+      dark: '#002984',
       contrastText: '#fff',
     },
     secondary: {
@@ -31,7 +31,7 @@ const theme = createMuiTheme({
       main: '#00d589',
     },
     error: {
-      main: '#832838',
+      main: '#ff4444',
     },
     background: {
       default: '#fff',

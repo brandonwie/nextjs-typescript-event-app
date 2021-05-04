@@ -1,4 +1,4 @@
-import { useRef, MutableRefObject } from 'react';
+import { useRef } from 'react';
 import { FC, FormEvent } from 'react';
 import ButtonIcon from '../../layout/ButtonIcon';
 import classes from './event-search.module.css';
@@ -10,13 +10,13 @@ interface EventsSearchProps {
 const EventsSearch: FC<EventsSearchProps> = ({
   onSearch,
 }: EventsSearchProps) => {
+  // important
   const yearInputRef = useRef<HTMLSelectElement>(null);
   const monthInputRef = useRef<HTMLSelectElement>(null);
 
   const submitHandler = (event: FormEvent<EventTarget>) => {
     event.preventDefault();
     if (yearInputRef.current && monthInputRef.current) {
-      console.log(yearInputRef.current.value, monthInputRef.current.value);
       const selectedYear = yearInputRef.current.value;
       const selectedMonth = monthInputRef.current.value;
 
