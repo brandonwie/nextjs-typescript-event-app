@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { NextRouter, useRouter } from 'next/router';
 import { getFilteredEvents } from '../../dummy-data';
+import EventList from '../../components/events/event-list';
 
 const FilteredEventsPage: FC = (): JSX.Element => {
   const router: NextRouter = useRouter();
@@ -41,7 +42,7 @@ const FilteredEventsPage: FC = (): JSX.Element => {
 
   return (
     <div>
-      <h1>Filtered Events</h1>
+      <EventList data={filteredEvents} />
     </div>
   );
 };
